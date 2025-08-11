@@ -118,7 +118,7 @@ const theme = createTheme({
       styleOverrides: {
         root: {
           textTransform: 'none',
-          borderRadius: 12,
+          borderRadius: 4,
           padding: '10px 20px',
         },
       },
@@ -127,7 +127,7 @@ const theme = createTheme({
       styleOverrides: {
         root: {
           '& .MuiOutlinedInput-root': {
-            borderRadius: 12,
+            borderRadius: 4,
             backdropFilter: 'blur(10px)',
             background: 'rgba(255, 255, 255, 0.6)',
           },
@@ -313,7 +313,7 @@ const CronBuilder: React.FC<CronBuilderProps> = ({
   ];
   
   return (
-    <Card elevation={0} sx={{ borderRadius: 4 }}>
+    <Card elevation={0} sx={{ borderRadius: 1 }}>
       <CardContent sx={{ p: 4 }}>
         <Stack spacing={4}>
           {/* Header */}
@@ -348,7 +348,7 @@ const CronBuilder: React.FC<CronBuilderProps> = ({
                 '& .MuiToggleButton-root': {
                   border: '1px solid',
                   borderColor: 'divider',
-                  borderRadius: 2,
+                  borderRadius: 1,
                   py: 1.5,
                   '&.Mui-selected': {
                     bgcolor: 'primary.main',
@@ -461,7 +461,7 @@ const CronDisplay: React.FC<CronDisplayProps> = ({ expression }) => {
   const readable = cronUtils.humanReadable(expression);
   
   return (
-    <Paper elevation={0} sx={{ p: 3, borderRadius: 3, height: '100%' }}>
+    <Paper elevation={0} sx={{ p: 3, borderRadius: 1, height: '100%' }}>
       <Stack spacing={2}>
         <Stack direction="row" spacing={1} alignItems="center">
           <AccessTime color="primary" fontSize="small" />
@@ -587,7 +587,7 @@ const CronBuilderDemo: React.FC = () => {
               </Grid>
               
               <Grid item xs={12} md={6}>
-                <Paper elevation={0} sx={{ p: 3, borderRadius: 3, height: '100%' }}>
+                <Paper elevation={0} sx={{ p: 3, borderRadius: 1, height: '100%' }}>
                   <Stack direction="row" spacing={1} alignItems="center" mb={3}>
                     <Lightbulb color="warning" fontSize="small" />
                     <Typography variant="body2" color="text.secondary" fontWeight={500}>
